@@ -9,6 +9,7 @@ const leftbtn = document.querySelector(".btn-left");
 const nameTag = document.querySelector(".name-tag");
 const slideHolder = document.querySelector(".slide-holder");
 const centerImg = document.querySelector(".center-img");
+const bgColor = document.querySelector(".slides")
 let current = 0;
 let prev = 2;
 let alpha = slideshow.length;
@@ -21,11 +22,11 @@ let alpha = slideshow.length;
 //slide.style.top = `${(indx + current) +  50} slide 3 //if cuurent is 1
 
 const bottomImg = [
-  "  images/image-jennie.jpg",
-  "images/slide6.png",
-  "images/image-thomas.jpg",
-  "images/image-avatar.png",
-  "images/image-emily.jpg",
+  " images/Ellipse 17.png",
+  "images/Ellipse 19.png",
+  "images/Ellipse 20.png",
+  "images/Ellipse 21.png",
+  "images/Ellipse 18.png",
 ];
 const newHead = [
   {
@@ -135,6 +136,12 @@ const change = (direction) => {
   } else {
     slideHolder.style.transform = `rotate(${0}deg)`;
     current = 0;
+  }
+  if(current % 2 !== 0){
+    bgColor.style.background = "#7ABD87"
+  }
+  else{
+    bgColor.style.background = "#8be392"
   }
 
   names.innerText = newHead[current].names;

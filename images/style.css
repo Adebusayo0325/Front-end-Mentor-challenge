@@ -193,25 +193,37 @@ body {
     transform: rotate(0deg);
     transition-delay: 0.2s;
   }
-  20% {
-    transform: rotate(36deg);
+  12% {
+    transform: rotate(30deg);
     transition-delay: 0.4s;
   }
-  40% {
-    transform: rotate(72deg);
+  24% {
+    transform: rotate(60deg);
+    transition-delay: 0.6s;
+  }
+  36% {
+    transform: rotate(90deg);
     transition-delay: 0.8s;
   }
-  60% {
-    transform: rotate(108deg);
+  48% {
+    transform: rotate(120deg);
     transition-delay: 0.12s;
   }
-  80% {
-    transform: rotate(144deg);
-    transition-delay: 0.16s;
+  60% {
+    transform: rotate(150deg);
+    transition-delay: 0.15s;
+  }
+  72% {
+    transform: rotate(180deg);
+    transition-delay: 0.18s;
+  }
+  90% {
+    transform: rotate(210deg);
+    transition-delay: 0.21s;
   }
   100% {
-    transform: rotate(360deg);
-    transition-delay: 20s;
+    transform: rotate(240deg);
+    transition-delay: 0.24s;
   }
 }
 .name-tag {
@@ -310,6 +322,7 @@ p {
   }
   .container {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -322,38 +335,41 @@ p {
   .text-side {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     position: absolute;
-    top: 90%;
-    left: 10%;
+    top: 70%;
+    left: 0%;
   }
   .slides {
     /* background-color: yellow; */
+    width: 120vw;
     background-color: #8be392;
-    height: 37rem;
+    height: 45rem;
     position: relative;
     border-radius: 50%;
-    top: -45%;
-    right: -20%;
-    overflow: visible;
+    top: -50%;
+    right: 0%;
+    overflow: hidden;
     transition: transform 2s linear;
   }
   .slides::before {
     content: "";
-    width: 100%;
+    width: 79%;
     margin: auto;
     position: absolute;
-    top: 60%;
-    transform: rotateZ(-60deg);
-    left: 0%;
+    top: 50%;
+    transform: rotateZ(0deg);
+    left: 10%;
     height: 40rem;
     border: dashed 3px rgb(13, 45, 18);
     border-radius: 50%;
     /*background-color: yellow;*/
   }
   .slide {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     margin: 0 20px;
     top: 70%;
@@ -411,11 +427,11 @@ p {
   }
   .center-img {
     position: relative;
-    top: -15%;
+    top: 25%;
     border-radius: 50%;
-    right: 16%;
-    width: 700px;
-    height: 130px;
+    right: 0%;
+    width: 180px;
+    height: 180px;
     transition: 5s ease;
   }
   .center-img img {
@@ -433,7 +449,7 @@ p {
     height: 50px;
     color: white;
     position: relative;
-    top: 10%;
+    top: 20%;
     right: 30%;
     font-size: 24px;
   }
@@ -444,13 +460,13 @@ p {
     height: 50px;
     color: white;
     position: relative;
-    top: 10%;
-    right: -15%;
+    top: 24%;
+    right: -28%;
     font-size: 24px;
   }
   .slide-holder {
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 100%;
     transform: rotate(0deg);
     border: solid 0px red;
@@ -458,7 +474,7 @@ p {
     width: 80%;
     margin: auto;
     position: absolute;
-    top: 58%;
+    top: 49.8%;
     transition: transform 2s ease-out;
     left: 10%;
     height: 50rem;
@@ -493,8 +509,8 @@ p {
   }
   .name-tag {
     position: inherit;
-    top: 25%;
-    left: -27%;
+    top: 50%;
+    left: 0%;
     background-color: #8be392;
     padding: 0.5rem;
     min-width: 150px;
@@ -541,7 +557,7 @@ p {
     color: black;
     margin: 10px;
     word-spacing: 1.5;
-    width: 80%;
+    width: 50%;
   }
   .title {
     font-size: 18px;

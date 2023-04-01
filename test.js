@@ -68,8 +68,6 @@ const newHead = [
     about: `I am Senior Software Developer American Express. Have been passionately solving Leetcode, HackerRank, Codechef, Codeforces problems, and enthusiastically solving problems with the analysis of space. `,
   },
 ];
-
-
 let numRate = ["4.9", "5.0","5.0","5.0","5.0"]
 let rateArr = [
   `<span><i class="fa fa-star" aria-hidden="true"></i></span>
@@ -100,6 +98,7 @@ let rateArr = [
 ];
 let actual;
 let maxAngle;
+
 const change = (direction) => {
   // alert("workimg")
   // console.log(slideshow.length);
@@ -156,18 +155,28 @@ const change = (direction) => {
   centerImg.style.transition = `${50}ms ease-in`;
 };
 
+ let rotate
+ let child;
+ 
+//  slideholderFunction()
+
+
 
 
 
 function rotateSlides () {
-   
+   slideRotate++;
+
+    imageRotate++;
   slideshow.forEach((slide,indx) =>{
     if(indx > current){
     slide.style.transform = `rotate(${(current) * 30}deg)`
        
     }
      slide.style.transform = `rotate(-${(current) * 30}deg)`
-    
+        slideRotate++;
+
+    imageRotate++;
   })
 }
 

@@ -11,8 +11,8 @@ const slideHolder = document.querySelector(".slide-holder");
 const centerImg = document.querySelector(".center-img");
 const bgColor = document.querySelector(".slides")
 let current = 0;
-let prev = 2;
-let alpha = slideshow.length;
+// let prev = 2;
+// let alpha = slideshow.length;
 //select all slides
 //use foreach to loop through all the slides
 //i want the position to change with each click
@@ -101,10 +101,9 @@ let rateArr = [
 let actual;
 let maxAngle;
 const change = (direction) => {
-  // alert("workimg")
-  // console.log(slideshow.length);
+  
   if (direction === "right") {
-    // prev++;
+    
 
     if (current > slideshow.length - 1) {
       current === 0;
@@ -116,7 +115,7 @@ const change = (direction) => {
   } else if (current < 0) {
     current = newHead.length - 1;
   } else if (direction === "left") {
-    prev--;
+    
 
     if (current < 1) {
       current === slideshow.length;

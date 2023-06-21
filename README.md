@@ -2,8 +2,10 @@ Project Name
 Web development mentorship program
 Introduction
 It connects developers with mentors
-Must include link to your deployed site, final project blog article, author(s) LinkedIn
-https://coders-den-mentro-web-challenge.netlify.app/
+
+Site link --https://coders-den-mentro-web-challenge.netlify.app/
+Blog-link -- https://www.linkedin.com/posts/waliu-abiose-75928b213_activity-7077376518485606400-RW2b
+Linked-In --- https://www.linkedin.com/in/waliu-abiose-75928b213
 Installation
 this project does not require any installation
 Usage

@@ -2,7 +2,7 @@ const slideshow = document.querySelectorAll(".slide");
 const names = document.querySelector(".h1");
 const rate = document.querySelector(".rate");
 const rating = document.querySelector(".rating");
-const position = document.querySelector(".title");
+const positions = document.querySelector(".title");
 const about = document.querySelector(".text");
 const rightbtn = document.querySelector(".btn-right");
 const leftbtn = document.querySelector(".btn-left");
@@ -114,16 +114,17 @@ const change = (direction) => {
     current = 0;
   } else if (current < 0) {
     current = newHead.length - 1;
-  } else if (direction === "left") {
+  }
+   else if (direction === "left") {
     
 
     if (current < 1) {
-      current === slideshow.length;
+      current === slideshow.length ;
     }
     if (current > newHead.length - 1) {
       current = 0;
-    } else if (current < 0) {
-      current = newHead.length - 1;
+    } else if (current < 1) {
+      current = newHead.length;
     }
     current--;
   }
@@ -148,13 +149,15 @@ const change = (direction) => {
   names.innerText = newHead[current].names;
   rate.innerText = numRate[current];
   rating.innerHTML = rateArr[current];
-  position.innerText = newHead[current].position;
+  positions.innerText = newHead[current].position;
   about.innerText = newHead[current].about;
   nameTag.innerText = newHead[current].names;
   centerImg.innerHTML = `<img src="${bottomImg[current]}" alt="center-img">`;
   centerImg.style.transition = `${50}ms ease-in`;
 };
 
+
+   slideshow.forEach(slide =>  slide.style.transform = `rotate(${(current) * 30}deg)`)
 
 
 
